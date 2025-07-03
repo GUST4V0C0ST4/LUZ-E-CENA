@@ -1,14 +1,11 @@
 import { Children } from "react";
 
 type ButtonProps = {
-    variant:
-}
+  variant: "default" | "icon";
+} & React.ButtonHTMLAttributes<HTMLAnchorElement>;
 
- const Button = ( {children} ) => {
-  return (
-    <button>{children}</button>
-
-     );
-    }
+const Button = ({ children }: ButtonProps) => {
+  return <button className={styles }>{children}</button>;
+};
 
 export default Button;
